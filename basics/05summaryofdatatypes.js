@@ -38,3 +38,27 @@ console.log(typeof n)
 console.log(typeof myfunc)
 console.log(typeof heroes)
 console.log(typeof id);
+console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+console.log("stack and heap")
+/*  primitive types :stack
+    non primitive: heap
+    stack: copy of variable
+    heap: refrence of original value ie original value will change.*/
+let myytname="sharmas"
+let anothername=myytname
+console.log(myytname)
+console.log(anothername)
+anothername="sharmaggggg"
+console.log("-------------------------------------")
+console.log(myytname)
+console.log(anothername)
+console.log("*******************************************")
+let obj={
+    username:"nidhi",
+    email:"hlo@upi"
+
+}
+let user=obj
+console.log(obj.email)
+user.email="sharmag@gmail.com"
+console.log(obj.email)

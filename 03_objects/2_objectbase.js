@@ -42,3 +42,25 @@ console.log(Object.keys(tinderuser))//will display keys of object in array
 console.log(Object.values(tinderuser))//will display values of object in array
 console.log(Object.entries(tinderuser))//will display the key and value in array
 console.log(tinderuser.hasOwnProperty('isloged'))//will check if the property is there or not returns a bollean value either true or false
+//*********************object destructuring********************************************* */
+const course={
+      coursename:"javascript",
+      price:"999",
+      courseinstructor:"sharma"
+
+}
+const{price:re}=course//another way to print --> destructuring 
+// console.log(price);
+console.log(re);
+//{} braces ka syntax=destructuring 
+//object has a refernce name then curly braces eg const obj={ }
+//but if only curly braces{} means its json
+// {
+//     "name":"hlo",
+//     "price":"90"//in json key  are string
+
+// }
+[//json can also be in array format or object format ie { }or[ ]
+    { },
+    { },
+]

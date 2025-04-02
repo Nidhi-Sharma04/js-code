@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body style="background-color: black ;">
+<body style="background-color: black ;color:white">
     Value	State	Description
 0	UNSENT	Client has been created. open() not called yet.
 1	OPENED	open() has been called.
@@ -14,10 +14,19 @@
 4	DONE	The operation is complete.
 </body>
 <script>
-    const xhr=new XMLHttpRequest()   //cretaing object
     const requrl='https://api.github.com/users/Nidhi-Sharma04'
+    const xhr=new XMLHttpRequest();  //cretaing object
+    
     xhr.open('GET',requrl)//open is used to send request with fst parameter as kya chahiye data lenda dnea and scnd is parameter
-    console.log()
+    xhr.onreadystatechange=function(){
+        console.log(xhr.readyState)
+        if(xhr.readyState===4){
+            const data=JSON.parse(this.response);
+            console.log(typeof data);
+            console.log(data.followers)
+        }
+    }
+    // console.log(xhr.readyState);
     xhr.send()//open doesnot get called itself to call it we use send() function
 </script>
 </html>

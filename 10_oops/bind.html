@@ -19,7 +19,7 @@
     document.querySelector('button').addEventListener('click',this.handleclick.bind(this))}
     handleclick(){
         console.log("button clicked");
-        console.log(this.server);
+        console.log(this.server);//if we dont apply ****bind() then the variables defined in identifier are not getting
         
     }
 }
